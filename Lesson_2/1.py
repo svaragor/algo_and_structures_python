@@ -1,3 +1,4 @@
+# coding=utf-8
 """
 1.	Написать программу, которая будет складывать, вычитать, умножать или делить
 два числа. Числа и знак операции вводятся пользователем. После выполнения
@@ -9,3 +10,28 @@
 Также сообщать пользователю о невозможности деления на ноль,
 если он ввел 0 в качестве делителя.
 """
+while 1:
+    a = float (input ('введите первое число '))
+    while 1:
+        operand = input ('введите операнд +, -, /, * или 0 для завершения ')
+        if operand == '+' or operand == '-' or operand == '/' or operand == '*' or operand == '0':
+            break
+        else:
+            print ('вы ввели некорректный операнд')
+    if operand == '0':
+        break
+    b = float (input ('введите второе число '))
+    if operand == '/' and b !=0.0:
+        c = a/b
+        print ('%f %s %f = %f' % (a, operand, b, c) )
+    elif operand == '/' and b ==0.0:
+    	print ('на ноль делить нельзя')
+    if operand == '+':
+        c = a+b
+        print ('%f %s %f = %f' % (a, operand, b, c) )
+    if operand == '-':
+        c = a-b
+        print ('%f %s %f = %f' % (a, operand, b, c) )
+    if operand == '*':
+        c = a*b
+        print ('%f %s %f = %f' % (a, operand, b, c) )
