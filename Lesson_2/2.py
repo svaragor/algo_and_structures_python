@@ -3,3 +3,15 @@
 Например, если введено число 34560, то у него 3 четные цифры
 (4, 6 и 0) и 2 нечетные (3 и 5).
 """
+a = int(input ('введите натуральное число '))
+counter_even = 0 #счетчик четных
+counter_odd = 0  #счетчик нечетных
+#denominator = 10  #делитель
+while a>0:
+	digit = a%10
+	a=a//10
+	if digit%2 == 0:
+		counter_even +=1
+	else:
+		counter_odd +=1
+print('четных цифр = %d, нечетных цифр = %d' % (counter_even, counter_odd))

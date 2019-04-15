@@ -3,3 +3,10 @@
 цифр и вывести на экран. Например, если введено число 3486,
  то надо вывести число 6843.
 """
+a = int(input ('введите натуральное число '))
+switch_num = ''
+while a>0:
+	digit = a%10
+	a=a//10
+	switch_num = switch_num + str(digit) 
+print(switch_num)
