@@ -5,3 +5,18 @@
 число, чем то, что загадано. Если за 10 попыток число не отгадано,
 то вывести загаданное число.
 """
+import random
+a=random.randint(0,100)
+gadala = 'no'
+for i in range(10):
+    j = int(input('введиите число '))
+    if j==a:
+        print('Вы угадали число!')
+        gadala = 'yes'
+        break
+    elif j<a:
+        print('Загаданное число больше')
+    else:
+        print('Загаданное число меньше')
+if gadala == 'no':
+    print('Вы не угадали число!')
