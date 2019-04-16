@@ -4,9 +4,11 @@
 """
 counter = int (input('введите количество элементов'))
 a = 1.0
+summ_row = 0.0
 for i in range(counter):
     if i%2 != 0:
-        print('-',a)
+        summ_row -= a
     else:
-        print(a)
+        summ_row += a
     a=a/2
+print('summ = %f' % summ_row)
